@@ -1,9 +1,12 @@
 # TACACS Nexus 9ks
 ansible_user: "george"
 ansible_ssh_pass: "george"
+ansible_network_os: "cisco.nxos.nxos"
+ansible_connect: "network_cli"
+ansible_become: true
+ansible_become_method: enable
 
 # Nexus Platform Features
-ansible_network_os: "nxos"
 enabled_features:
   - vpc
   - nxapi

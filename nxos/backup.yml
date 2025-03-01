@@ -1,0 +1,11 @@
+---
+- name: Backup NXOS Devices
+  hosts: nxos_switch
+
+  tasks:
+    - name: Backup Nexus Switches
+      cisco.nxos.nxos_config:
+        backup: true
+        backup_options:
+          filename: "{{ inventory_hostname }}-backup.txt"
+          dir_path: ./BACKUPS

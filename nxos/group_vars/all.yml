@@ -1,16 +1,13 @@
 ---
-# Default Login details
+# Defaults Ansible Logic
 
-ansible_network_os: "ios"
-ansible_connect: "network_cli"
-
+# It was important to use ansible connection CLI for SSH with NXOS as otherwise nothing worked. I Defined it here.
+ansible_connection: network_cli
 # Global System Settings
 
 ntp_servers:
   - 1.1.1.1
   - 2.2.2.2
-  - 3.3.3.3
-
 
 # Project Directory
 

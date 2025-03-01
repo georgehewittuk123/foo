@@ -1,0 +1,10 @@
+---
+- name: Test reachability to the Firewall
+  hosts: nxos_switch
+  gather_facts: no
+
+  tasks:
+    - name: Ping the NXOS device
+      ansible.netcommon.net_ping:
+        dest: 10.200.30.254
+        vrf: management

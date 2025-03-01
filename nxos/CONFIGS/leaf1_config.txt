@@ -2,7 +2,6 @@ hostname leaf1
 
 ntp server 1.1.1.1
 ntp server 2.2.2.2
-ntp server 3.3.3.3
 
 feature vpc
 feature nxapi
