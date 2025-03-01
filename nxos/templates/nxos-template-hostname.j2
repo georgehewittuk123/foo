@@ -1,0 +1,9 @@
+hostname {{ hostname }}
+
+{% for ntp_server in ntp_servers %}
+ntp server {{ ntp_server }}
+{% endfor %}
+
+{% for enabled_features in enabled_features %}
+feature {{ enabled_features }}
+{% endfor %}

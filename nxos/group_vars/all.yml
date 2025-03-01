@@ -4,6 +4,14 @@
 ansible_network_os: "ios"
 ansible_connect: "network_cli"
 
+# Global System Settings
+
+ntp_servers:
+  - 1.1.1.1
+  - 2.2.2.2
+  - 3.3.3.3
+
+
 # Project Directory
 
 directory: /home/george/Desktop/ansible-projects

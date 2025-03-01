@@ -1,3 +1,11 @@
 # TACACS Nexus 9ks
 ansible_user: "george"
 ansible_ssh_pass: "george"
+
+# Nexus Platform Features
+ansible_network_os: "nxos"
+enabled_features:
+  - vpc
+  - nxapi
+  - interface-vlan
+  - lacp
