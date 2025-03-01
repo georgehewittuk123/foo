@@ -1,0 +1,6 @@
+[nxos_switch]
+leaf1 ansible_host=10.200.30.244
+leaf2 ansible_host=10.200.30.245
+
+[iosxe_router]
+R1 ansible_host=10.200.30.246

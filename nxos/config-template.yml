@@ -1,0 +1,9 @@
+---
+- name: Build Config Template NXOS
+  hosts: nxos_switch
+
+  tasks:
+    - template:
+        src: nxos-template-hostname.j2
+        dest: ./CONFIGS/{{ inventory_hostname }}_config.txt
+      delegate_to: localhost # This tells ansible to run this task locally

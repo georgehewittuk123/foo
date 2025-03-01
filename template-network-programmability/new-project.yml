@@ -1,0 +1,37 @@
+---
+# Playbook to setup Folder structures for new project
+
+- name: Prompt for Project / Foldername
+  hosts: localhost
+
+# Needs directory VAR is in the all.yml
+
+# Uses the name i make below in the task to make a directory.
+  vars_prompt:
+
+    - name: project
+      prompt: Name of Project/Customer?
+      private: no
+
+  tasks:
+    
+    - name: Create Project Directory and Group Vars Folder
+      file:
+        path: "{{ directory }}/{{ project }}/group_vars"
+        state: directory
+      delegate_to: localhost #We want the task to run on the local host not a host
+
+    - name: Create an Ansible Config copy for new project
+      copy:
+        src: "{{ directory }}//template-network-programmability/ansible.cfg"
+        dest: "{{ directory }}/{{ project }}/ansible.cfg"
+
+    - name: Copy Inventory ini file
+      copy:
+        src: "{{ directory }}/template-network-programmability/inventory.ini"
+        dest: "{{ directory }}/{{ project }}/inventory.ini"
+
+    - name: Copy all.yml file
+      copy:
+        src: "{{ directory }}/template-network-programmability/group_vars/all.yml"
+        dest: "{{ directory }}/{{ project }}/group_vars/all.yml"

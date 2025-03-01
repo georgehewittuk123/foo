@@ -1,0 +1,3 @@
+# TACACS Nexus 9ks
+ansible_user: "george"
+ansible_ssh_pass: "george"
