@@ -1,0 +1,9 @@
+---
+# Default Login details
+
+username: "admin"
+password: "Vel0ceraptor101!"
+
+# Project Directory
+
+directory: /home/george/Desktop/ansible-projects
